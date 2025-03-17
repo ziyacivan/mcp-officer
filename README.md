@@ -26,11 +26,11 @@ A Model Context Protocol (MCP) based police interrogation simulation server powe
 ## 🚀 Installation
 
 ```bash
-npm install
+pnpm install
 # Required environment variables
 cp .env.example .env
 # Start server
-npm start
+pnpm start
 ```
 
 ## ⚙️ Configuration
