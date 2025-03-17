@@ -113,13 +113,13 @@ app.post("/interrogations/:suspectId", express.json(), async (req, res) => {
   } catch (error) {
     if (error instanceof z.ZodError) {
       res.status(400).json({
-        error: "Geçersiz istek formatı",
+        error: "Invalid request format",
         details: error.errors,
       });
     } else {
       res.status(500).json({
-        error: "Sunucu hatası",
-        message: error instanceof Error ? error.message : "Bilinmeyen hata",
+        error: "Server error",
+        message: error instanceof Error ? error.message : "Unknown error",
       });
     }
   }
@@ -152,13 +152,13 @@ app.post(
     } catch (error) {
       if (error instanceof z.ZodError) {
         res.status(400).json({
-          error: "Geçersiz istek formatı",
+          error: "Invalid request format",
           details: error.errors,
         });
       } else {
         res.status(500).json({
-          error: "Sunucu hatası",
-          message: error instanceof Error ? error.message : "Bilinmeyen hata",
+          error: "Server error",
+          message: error instanceof Error ? error.message : "Unknown error",
         });
       }
     }
